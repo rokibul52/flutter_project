@@ -1,0 +1,50 @@
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MyHome(),
+    );
+  }
+}
+
+class MyHome extends StatelessWidget {
+  const MyHome({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    var arrNames=["Rokibul", "Joya", "Chondona", "Lily", "Minarul"];
+  
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Basic App"),
+        backgroundColor: Colors.orange,
+      ),
+      body: ListView.separated(itemBuilder:(context,index){
+        return ListTile(
+          leading: Text("${index+1}"),
+          title: Text(arrNames[index]),
+          subtitle: Text("Number"),
+          trailing: Icon(Icons.add),
+        );
+      },
+      itemCount: arrNames.length,
+      separatorBuilder: (context,index){
+        return Divider(height: 20, thickness: 1,);
+
+      },
+  
+      )
+      
+    );
+  }
+}
