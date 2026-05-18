@@ -1,0 +1,50 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MyHome(),
+    );
+  }
+}
+
+class MyHome extends StatelessWidget {
+  const MyHome({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Basic App"),
+        backgroundColor: Colors.blue,
+      ),
+      // Body-te ekhon sudhu ekta Text ache, apni eita change korben
+      body: Container(
+        color:Colors.amber,
+        height: 200,
+        width: 300,
+      child:Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text("Rokibul ",style: TextStyle(
+            color: Colors.blueAccent,
+          ),),
+          Text("Islam "),
+          Text("Chonchol"),
+          ElevatedButton(onPressed: (){},
+           child: Text("click"))
+        ],
+      )
+      )
+    );
+  }
+}
