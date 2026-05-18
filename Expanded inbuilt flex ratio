@@ -1,0 +1,84 @@
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MyHome(),
+    );
+  }
+}
+
+class MyHome extends StatelessWidget {
+  const MyHome({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+  
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Basic App"),
+        backgroundColor: Colors.orange,
+      ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(2.0),
+            child: Container(
+              height: 50,
+              width: 50,
+              color: Colors.blue,
+              
+            ),
+          ),
+      Expanded(
+        flex: 4,
+            child: Padding(
+              padding: const EdgeInsets.all(2.0),
+              child: Container(
+                height: 50,
+                width: 50,
+                color: Colors.green,
+                
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Padding(
+              padding: const EdgeInsets.all(2.0),
+              child: Container(
+                height: 50,
+                width: 50,
+                color: Colors.grey,
+                
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(2.0),
+            child: Container(
+              height: 50,
+              width: 50,
+              color: Colors.red,
+              
+            ),
+          ),
+          
+        ],
+
+      )
+      
+    );
+  }
+}
