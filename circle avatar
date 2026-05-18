@@ -1,0 +1,49 @@
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MyHome(),
+    );
+  }
+}
+
+class MyHome extends StatelessWidget {
+  const MyHome({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    
+  
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Basic App"),
+        backgroundColor: Colors.orange,
+      ),
+
+      body: Center(
+        child: CircleAvatar(
+          child: Text("Md Rokibul Islam Chonchol", style: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+          ),),
+          backgroundImage: NetworkImage("https://scontent.fdac138-1.fna.fbcdn.net/v/t39.30808-6/584779494_122105061633109231_7047036703665084684_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF54y4Wl2YtzEenL8cRuvauofLiAbppEeSh8uIBumkR5Dv73fQ2COpwIMT2VSaB5pVvjFWaq-xBIbVaGAz2DM8o&_nc_ohc=VjO8uIC27Y4Q7kNvwFsyu31&_nc_oc=AdpqDDU7XY-luEdan8pD9Fqr3sNkGAP0L5H4WYvG_gcCvGobWL0JyOAs-C907xcgnE4&_nc_zt=23&_nc_ht=scontent.fdac138-1.fna&_nc_gid=OivVaFbqo232SwpSeCrbLg&_nc_ss=7b2a8&oh=00_Af7ctVv7MSjHf0OQXNlYivrh6qKpMBHxBnKDoZrXeSFqxw&oe=6A11221F"),
+          backgroundColor: Colors.blue,
+          radius: 100,
+          //minRadius: 50,
+          //maxRadius: 50,
+        ),
+      ),
+      
+    );
+  }
+}
