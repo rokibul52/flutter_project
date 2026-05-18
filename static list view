@@ -1,0 +1,70 @@
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MyHome(),
+    );
+  }
+}
+
+class MyHome extends StatelessWidget {
+  const MyHome({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Basic App"),
+        backgroundColor: Colors.orange,
+      ),
+      body:ListView(
+        scrollDirection: Axis.horizontal,
+        reverse: true,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("Md",style: TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("Rokibul",style: TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("Islam",style: TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("Chonchol",style: TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("Tasnia",style: TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("Jannat",style: TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("Joya",style: TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("Doctor",style: TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),
+          ),
+        ],
+      )
+    );
+  }
+}
